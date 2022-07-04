@@ -70,3 +70,11 @@ The e2e tests are using Protractor and Jasmine.
 ## License
 
 [License](LICENSE.txt)
+
+## this app is hosted by AWS 
+ -RDS for postgres database
+ -S3 for front end 
+ -eb for back-end
+
+ ## Front-end Application 
+  hosted working Front-End Application
