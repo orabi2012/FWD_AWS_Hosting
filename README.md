@@ -6,7 +6,7 @@ This application is provided to you as an alternative starter project if you do 
 
 ### Dependencies
 
-```
+
 - Node v16.15.0 (LTS) or more recent. While older versions can work it is advisable to keep node to latest LTS version
 
 - npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
@@ -17,17 +17,29 @@ This application is provided to you as an alternative starter project if you do 
 
 - A S3 bucket for hosting uploaded pictures.
 
-```
+ - more details check package.json files
 
-### Installation
+### Installation & running app
 
-Provision the necessary AWS services needed for running the application:
+ use scripts :-
+        "frontend:install": "cd udagram/udagram-frontend && npm install -f",
+        "frontend:start": "cd udagram/udagram-frontend && npm run start",
+        "frontend:build": "cd udagram/udagram-frontend && npm run build",
+        "frontend:test": "cd udagram/udagram-frontend && npm run test",
+        "frontend:e2e": "cd udagram/udagram-frontend && npm run e2e",
+        "frontend:lint": "cd udagram/udagram-frontend && npm run lint",
+        "frontend:deploy": "cd udagram/udagram-frontend && npm run deploy",
+        "frontend:deploy_local": "cd udagram/udagram-frontend && npm run deploy_local",
 
-1. In AWS, provision a publicly available RDS database running Postgres. <Place holder for link to classroom article>
-1. In AWS, provision a s3 bucket for hosting the uploaded files. <Place holder for tlink to classroom article>
-1. Export the ENV variables needed or use a package like [dotnev](https://www.npmjs.com/package/dotenv)/.
-1. From the root of the repo, navigate udagram-api folder `cd starter/udagram-api` to install the node_modules `npm install`. After installation is done start the api in dev mode with `npm run dev`.
-1. Without closing the terminal in step 1, navigate to the udagram-frontend `cd starter/udagram-frontend` to intall the node_modules `npm install`. After installation is done start the api in dev mode with `npm run start`.
+        "api:install": "cd udagram/udagram-api && npm install .",
+        "api:build": "cd udagram/udagram-api && npm run build",
+        "api:start": "cd udagram/udagram-api && npm run start",
+        "api:deploy": "cd udagram/udagram-api && npm run deploy",
+        "api:deploy_local": "cd udagram/udagram-api && npm run deploy_local",
+
+        "deploy": "npm run api:deploy && npm run frontend:deploy"
+
+        Note frontend:deploy_local , api:deploy_local for windows machines
 
 ## Testing
 
@@ -64,5 +76,17 @@ The e2e tests are using Protractor and Jasmine.
 
  ## Front-end Application 
   [http://fwd-07-2022.s3-website-us-east-1.amazonaws.com/home]
+
+  ## Diagram 
+  "./screenshot/diagram.png"
+
+  ## AWS Services
+  - "./screenshot/RDS.PNG"
+  -"./screenshot/Elastic Beanstalk.PNG"
+  -"./screenshot/S3-01.PNG"
+  -"./screenshot/S3-02.PNG"
+
+  ## ci/ci using circle ci connected to GitHub 
+  screen shot "./screenshot/CircleCi.PNG"
 
 
