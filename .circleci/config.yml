@@ -14,7 +14,7 @@ jobs:
           command: |
             npm run frontend:install
       - run:
-          name:API Install
+          name: API Install
           command: |
             npm run api:install
       - run:
@@ -25,8 +25,8 @@ jobs:
           name: Back-End Build
           command: |
             npm run api:build
-       - run:
-          name: Front-End deploy
+      - run:
+          name: Front-Enddeploy
           command: |
             npm run frontend:deploy_local
       - run:
