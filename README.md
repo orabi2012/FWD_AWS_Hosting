@@ -28,15 +28,17 @@ use scripts :-
 "frontend:deploy": "cd udagram/udagram-frontend && npm run deploy",
 "frontend:deploy_local": "cd udagram/udagram-frontend && npm run deploy_local",
 
-        "api:install": "cd udagram/udagram-api && npm install .",
-        "api:build": "cd udagram/udagram-api && npm run build",
-        "api:start": "cd udagram/udagram-api && npm run start",
-        "api:deploy": "cd udagram/udagram-api && npm run deploy",
-        "api:deploy_local": "cd udagram/udagram-api && npm run deploy_local",
+"api:install": "cd udagram/udagram-api && npm install .",
+"api:build": "cd udagram/udagram-api && npm run build",
+"api:start": "cd udagram/udagram-api && npm run start",
+"api:deploy": "cd udagram/udagram-api && npm run deploy",
+"api:deploy_local": "cd udagram/udagram-api && npm run deploy_local",
 
-        "deploy": "npm run api:deploy && npm run frontend:deploy"
+"deploy": "npm run api:deploy && npm run frontend:deploy"
 
-        Note frontend:deploy_local , api:deploy_local for windows machines
+## Note
+        frontend:deploy_local , api:deploy_local for windows machines
+        while frontend:deploy , api:deploy for Circleci
 
 ## Testing
 
@@ -74,7 +76,7 @@ The e2e tests are using Protractor and Jasmine.
 
 ## Front-end Application
 
-[http://fwd-07-2022.s3-website-us-east-1.amazonaws.com]
+[http://fwd-07-2022.s3-website-us-east-1.amazonaws.com](http://fwd-07-2022.s3-website-us-east-1.amazonaws.com)
 
 ## Diagram
 
@@ -89,4 +91,5 @@ The e2e tests are using Protractor and Jasmine.
 
 ## ci/ci using circle ci connected to GitHub
 
-screen shot "./screenshot/CircleCi.PNG"
+circleCi env "./screenshot/CircleCi_Env_Variable.PNG"
+circleCi success "./screenshot/CircleCi.PNG"
